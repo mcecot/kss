@@ -36,9 +36,8 @@ module Kss
       end
     end
 
-    def add_section comment_text, filename = ''
-      base_name = File.basename(filename)
-      section = Section.new(comment_text, base_name)
+    def add_section comment_text, filename = ''      
+      section = Section.new(comment_text, filename)
       @sections[section.section] = section
     end
 
